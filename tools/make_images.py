@@ -124,8 +124,6 @@ w, h = card.size; card = card.crop((0, 0, w // 2, h)); card = card.crop(card.get
 side = max(card.size) + 60; sq = Image.new("RGBA", (side, side), (43, 36, 51, 255))
 sq.paste(card, ((side - card.size[0]) // 2, (side - card.size[1]) // 2), card)
 sq.convert("RGB").resize((720, 720), Image.LANCZOS).save(O + "/bb-tile.jpg", quality=86)
-hexmap = Image.open(BB + "ai ganme broken coast map/Sprite-0002.png").convert("RGB")
-hexmap.thumbnail((640, 820), Image.LANCZOS); hexmap.save(O + "/bb-map.png", optimize=True)
 icons = []
 for f in ["forest icon.png", "icon caster.png", "icon cantrip.png", "icon feral.png", "icon fly.png", "icon huge.png", "icon range.png", "icon reg.png", "icon siege.png", "icon stealth.png"]:
     i = Image.open(BB + "elves/" + f).convert("RGBA"); i.thumbnail((72, 72), Image.LANCZOS); icons.append(i)
