@@ -146,8 +146,8 @@ Image.open(AV + "yulin-counter-sheet.png").convert("RGB").save(O + "/scs-counter
 # Age of Fantasy: Battalion tile, the right side of the rules page
 af = Image.open(AV + "battalion-rules.png").convert("RGBA")
 paper = Image.new("RGBA", af.size, (255, 255, 255, 255)); paper.alpha_composite(af)
-paper.convert("RGB").crop((152, 0, 941, 789)).resize((720, 720), Image.LANCZOS).save(O + "/af-rules-tile.png", optimize=True)
+paper.convert("RGB").crop((152, 0, 941, 789)).resize((720, 720), Image.LANCZOS).save(O + "/af-rules-tile.webp", quality=90)
 
 # Aethra Chronicles screenshot
 Image.open(AV + "aethra-screen.png").convert("RGB").save(O + "/ae-screen.png", optimize=True)
-Image.open(AV + "aethra-screen.png").convert("RGB").crop((322, 0, 1257, 935)).resize((720, 720), Image.LANCZOS).save(O + "/ae-tile.png", optimize=True)
+Image.open(AV + "aethra-screen.png").convert("RGB").crop((322, 0, 1257, 935)).resize((720, 720), Image.LANCZOS).save(O + "/ae-tile.webp", quality=86)
