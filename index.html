@@ -145,6 +145,7 @@ picture source { display: none; }
 .art-scs { background: #1d3a4a; }
 .art-ec { background: #1a1630; }
 .art-tp { background: #6b5a3a; }
+.art-rk { background: #7a3a20; }
 /* Aethra tile: one square per map in the game */
 .art-ae { background: radial-gradient(circle at 50% 35%, #1d2233, #0a0c13 75%); }
 .map-index { width: 72%; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 5px; transform: translateY(-10%); }
@@ -391,6 +392,10 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
         <li><a class="tile" href="#trolls">
           <div class="art art-tp"><img class="fill" src="img/tp-tile.jpg" alt="Two players giving thumbs up over a Trolls and Princesses game in progress" width="750" height="750"></div>
           <span class="label"><span class="name">Trolls and Princesses variant</span><span class="kind">Board game variant</span></span>
+        </a></li>
+        <li><a class="tile" href="#risk-lotr">
+          <div class="art art-rk"><img class="fill" src="img/rk-tile.jpg" alt="Risk: The Lord of the Rings map near Weathertop and Rivendell, crowded with red, black and green armies around a pink paper banner" width="800" height="800"></div>
+          <span class="label"><span class="name">Polished Risk: LotR</span><span class="kind">Board game variant</span></span>
         </a></li>
       </ul>
     </section>
@@ -1137,7 +1142,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Trolls and Princesses -->
     <section class="project" data-view="trolls" aria-labelledby="t-tp" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#risk-lotr">Next: Polished Risk: LotR →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="trolls"></div>
         <div class="p-intro">
@@ -1185,6 +1190,54 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
       <div class="block">
         <h3>At the table</h3>
         <p>A three-player game took two hours, scored 48, 45 and 35. Players new to the game praised how smoothly it ran.</p>
+      </div>
+    </section>
+    <!-- Risk LotR -->
+    <section class="project" data-view="risk-lotr" aria-labelledby="t-rk" hidden>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <div class="p-head">
+        <div class="p-art" data-art="risk-lotr"></div>
+        <div class="p-intro">
+          <p class="p-kind">Board game variant · 2019–2020</p>
+          <h2 id="t-rk">Polished Risk: LotR</h2>
+          <p class="lede">Reworked rules and Adventure Cards for <em>Risk: The Lord of the Rings</em>. Balanced units, all-in battles and a reason to hold land, so doom stacks take time and losing players can recover.</p>
+          <p><a href="https://boardgamegeek.com/filepage/178726/polished-rules-for-risk-lotr-basic-ed"><strong>Download the rules →</strong></a></p>
+          <ul class="facts">
+            <li>d6, d8 and d10 dice</li>
+            <li>Custom Adventure Cards</li>
+            <li>Homemade player banners</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <h3>What changes</h3>
+        <div class="cols">
+          <div>
+            <h4>Units</h4>
+            <p>Cavalry costs 2, rolls a d6, adds +1 to any die and moves two territories. A Monster costs 3 and removes one enemy unit outright, no roll.</p>
+          </div>
+          <div>
+            <h4>Battles</h4>
+            <p>Attacker and defender roll with all their units at once instead of 3 dice against 2.</p>
+          </div>
+          <div>
+            <h4>Production</h4>
+            <p>A new phase: if you don't move your army, draw territory cards equal to the lands you control divided by 3.</p>
+          </div>
+          <div>
+            <h4>Setup</h4>
+            <p>At most 4 units per territory at the start. No Ring movement, which slowed round counting without affecting the game.</p>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <h3>Adventure Cards</h3>
+        <ul class="plain">
+          <li><strong>No man can kill me:</strong> on another player's turn, they make only half their attack rolls (rounded up).</li>
+          <li><strong>It is not this day:</strong> defending on that player's turn, you hit on 2+.</li>
+          <li><strong>Cave Troll and Entmoot:</strong> remove half the units (rounded up) from the target territory, a nuke for doom stacks.</li>
+        </ul>
+        <p>You'll need a banner per player (a button, a toothpick and a sticky note), an extra sea lane drawn on the board, and sleeves for the custom cards.</p>
       </div>
     </section>
   </main>
