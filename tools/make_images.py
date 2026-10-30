@@ -147,3 +147,6 @@ Image.open(AV + "yulin-counter-sheet.png").convert("RGB").save(O + "/scs-counter
 af = Image.open(AV + "battalion-rules.png").convert("RGBA")
 paper = Image.new("RGBA", af.size, (255, 255, 255, 255)); paper.alpha_composite(af)
 paper.convert("RGB").crop((152, 0, 941, 789)).resize((720, 720), Image.LANCZOS).save(O + "/af-rules-tile.png", optimize=True)
+
+# Aethra Chronicles screenshot
+Image.open(AV + "aethra-screen.png").convert("RGB").save(O + "/ae-screen.png", optimize=True)
