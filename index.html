@@ -142,6 +142,7 @@ picture source { display: none; }
 .art-w1 img { width: 66%; height: auto; transform: translateY(-8%); }
 .art-bb { background: #2b2433; }
 .art-cy { background: #0e2a35; }
+.art-scs { background: #1d3a4a; }
 /* Aethra tile: one square per map in the game */
 .art-ae { background: radial-gradient(circle at 50% 35%, #1d2233, #0a0c13 75%); }
 .map-index { width: 72%; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 5px; transform: translateY(-10%); }
@@ -376,6 +377,10 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
         <li><a class="tile" href="#cyclades">
           <div class="art art-cy"><img class="fill" src="img/cy-tile.jpg" alt="Cyclades board in the middle of a game: islands, fleets and troops on a wooden table" width="800" height="800"></div>
           <span class="label"><span class="name">Cyclades variant</span><span class="kind">Board game variant</span></span>
+        </a></li>
+        <li><a class="tile" href="#yulin">
+          <div class="art art-scs"><img class="fill" src="img/scs-tile.jpg" alt="South China Sea map mid-game with small custom counters, task force trays and Spent, Engage and Low Ammo markers" width="800" height="800"></div>
+          <span class="label"><span class="name">Yulin: South China Sea</span><span class="kind">Board game variant</span></span>
         </a></li>
       </ul>
     </section>
@@ -945,7 +950,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 
     <!-- Cyclades -->
     <section class="project" data-view="cyclades" aria-labelledby="t-cy" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#yulin">Next: Yulin: South China Sea →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="cyclades"></div>
         <div class="p-intro">
@@ -1001,6 +1006,67 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
             <figcaption>New creature cards (pink) in play.</figcaption>
           </figure>
         </div>
+      </div>
+    </section>
+    <!-- Yulin -->
+    <section class="project" data-view="yulin" aria-labelledby="t-scs" hidden>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <div class="p-head">
+        <div class="p-art" data-art="yulin"></div>
+        <div class="p-intro">
+          <p class="p-kind">Board game variant · 2026</p>
+          <h2 id="t-scs">Yulin: South China Sea</h2>
+          <p class="lede">A streamlined ruleset for <em>South China Sea: Modern Naval Conflict</em> that plays more like a game than a wargame. Fewer rules to track, more decisions that matter.</p>
+          <p><a href="https://boardgamegeek.com/filepage/328334/yulin-variant"><strong>Download all files to print →</strong></a></p>
+          <ul class="facts">
+            <li>One d6 per strike</li>
+            <li>66 custom 15&nbsp;mm counters</li>
+            <li>New Chinese unit: maritime militia</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <h3>What changes</h3>
+        <div class="cols">
+          <div>
+            <h4>Fast dice</h4>
+            <p>One d6 per strike, weapon scores from 0 to 3. A natural 1 or 2 always misses, so most rolls need no maths. Full-strength counters strike twice, reduced ones once and gain +1 Stealth.</p>
+          </div>
+          <div>
+            <h4>Ammo</h4>
+            <p>Rolling a 1 and a 6 marks a ship Low Ammo; its next shot leaves it with No Ammo.</p>
+          </div>
+          <div>
+            <h4>Air defence</h4>
+            <p>Ships and ground batteries have an AA score and can hit aircraft in range of the Focus hex. A Spent air-defence unit only protects itself, opening gaps to strike carriers.</p>
+          </div>
+          <div>
+            <h4>Engagement</h4>
+            <p>Five steps: AA, AS, U, AG, G. Strike order follows Stealth only; on a tie the attacker starts and sides alternate one counter at a time. Targets in littoral hexes are 1 harder to hit.</p>
+          </div>
+          <div>
+            <h4>Evade</h4>
+            <p>Moving into enemy weapon range, you declare Evade. If it works, the group moves before combat and can't strike or be struck; if it fails, it moves after combat.</p>
+          </div>
+          <div>
+            <h4>Illumination</h4>
+            <p>Ships 5, AA ground batteries 2, submarines, militia and ground units 1, aircraft 0.</p>
+          </div>
+        </div>
+        <p><strong>Maritime militia:</strong> a Chinese fishing fleet that slows US movement, provides illumination, makes evading harder and soaks up US missiles.</p>
+      </div>
+      <div class="block">
+        <h3>At the table</h3>
+        <figure class="fig">
+          <div class="stage"><img src="img/scs-game.jpg" alt="End of the first round: US and Chinese task forces on political-card trays around the Paracel Islands" width="900" height="969"></div>
+          <figcaption>End of round one, played solo with 15&nbsp;mm counters and political cards as task-force trays. US losses were too high, so the fleet withdrew.</figcaption>
+        </figure>
+      </div>
+      <div class="block">
+        <h3>Downloads and threads</h3>
+        <ul class="plain">
+          <li><a href="https://boardgamegeek.com/filepage/328334/yulin-variant">All files to download and print</a></li>
+        </ul>
       </div>
     </section>
   </main>
