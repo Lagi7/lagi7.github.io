@@ -143,6 +143,7 @@ picture source { display: none; }
 .art-bb { background: #2b2433; }
 .art-cy { background: #0e2a35; }
 .art-scs { background: #1d3a4a; }
+.art-ec { background: #1a1630; }
 /* Aethra tile: one square per map in the game */
 .art-ae { background: radial-gradient(circle at 50% 35%, #1d2233, #0a0c13 75%); }
 .map-index { width: 72%; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 5px; transform: translateY(-10%); }
@@ -381,6 +382,10 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
         <li><a class="tile" href="#yulin">
           <div class="art art-scs"><img class="fill" src="img/scs-tile.jpg" alt="South China Sea map mid-game with small custom counters, task force trays and Spent, Engage and Low Ammo markers" width="800" height="800"></div>
           <span class="label"><span class="name">Yulin: South China Sea</span><span class="kind">Board game variant</span></span>
+        </a></li>
+        <li><a class="tile" href="#eclipse">
+          <div class="art art-ec"><img class="fill" src="img/ec-tile.jpg" alt="Eclipse hex sectors with red interceptors and a cruiser, discovery tiles and planets" width="304" height="304"></div>
+          <span class="label"><span class="name">Eclipse: Second Dawn variant</span><span class="kind">Board game variant</span></span>
         </a></li>
       </ul>
     </section>
@@ -1010,7 +1015,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Yulin -->
     <section class="project" data-view="yulin" aria-labelledby="t-scs" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#eclipse">Next: Eclipse: Second Dawn variant →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="yulin"></div>
         <div class="p-intro">
@@ -1067,6 +1072,62 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
         <ul class="plain">
           <li><a href="https://boardgamegeek.com/filepage/328334/yulin-variant">All files to download and print</a></li>
         </ul>
+      </div>
+    </section>
+    <!-- Eclipse -->
+    <section class="project" data-view="eclipse" aria-labelledby="t-ec" hidden>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <div class="p-head">
+        <div class="p-art" data-art="eclipse"></div>
+        <div class="p-intro">
+          <p class="p-kind">Board game variant · 2025</p>
+          <h2 id="t-ec">Eclipse: Second Dawn variant</h2>
+          <p class="lede">House rules for <em>Eclipse: Second Dawn for the Galaxy</em> that skip the long economic build-up. Set up in three rounds at most, then keep throwing punches.</p>
+          <p><a href="https://boardgamegeek.com/thread/3052227/ancient-ship-part-need-always-upgrade-action-pleas"><strong>Read the rules on BoardGameGeek →</strong></a></p>
+          <ul class="facts">
+            <li>Double starting resources</li>
+            <li>Research + Upgrade in one action</li>
+            <li>Monoliths from turn one</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <h3>Quicker start</h3>
+        <ul class="plain">
+          <li>Double starting Materials, Science and Money. Each player starts with 3 Interceptors and 1 Cruiser (Orion: 2 Cruisers).</li>
+          <li>Take four starting sectors (I, II, III, III) around your home, with their discovery tiles. They count toward the sector III limit.</li>
+          <li>Discovery tiles are drawn from the black bag when revealed or when Ancients are cleared; reputation tiles are not used.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>What changes</h3>
+        <div class="cols">
+          <div>
+            <h4>Actions</h4>
+            <p>Research and Upgrade are one action. Discoveries must be used (no 2&nbsp;VP option) and explored sectors must be placed. No diplomats or traitors.</p>
+          </div>
+          <div>
+            <h4>Specialised population</h4>
+            <p>At round end, spend 3 Colony Ships to place a Diplomat on your mat with a population cube of your choice on top (+1&nbsp;VP). Up to 3.</p>
+          </div>
+          <div>
+            <h4>Combat</h4>
+            <p>Cannons hit on 5+, missiles on 6. No reputation draws. Dreadnoughts carry up to 4 Interceptors. Lost ships give Science: Interceptor 1, Cruiser 3, Dreadnought 4, Starbase 2.</p>
+          </div>
+          <div>
+            <h4>Monoliths</h4>
+            <p>Buildable from the start for 10 Materials, each worth 1&nbsp;VP per round. Ships with 3 spare power can jump between Monoliths and warp portals.</p>
+          </div>
+          <div>
+            <h4>Tech tweaks</h4>
+            <p>Neutron bombs strike before combat. Gauss and Phase Shields protect planets. Improved Hull costs 1 initiative. Ancient Lab grants an extra Research action.</p>
+          </div>
+          <div>
+            <h4>Factions</h4>
+            <p>Planta specialises with 2 Colony Ships but loses its per-sector VP. Mechanema starts with one fewer Colony Ship.</p>
+          </div>
+        </div>
+        <p><strong>Being tested:</strong> spend 10 Science on a discovery tile instead of a technology.</p>
       </div>
     </section>
   </main>
