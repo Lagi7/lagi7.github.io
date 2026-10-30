@@ -1354,7 +1354,10 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     render(pool);
   });
   hard.addEventListener("change", function () { if (last) render(last); });
-  defense.addEventListener("change", function () { if (last) render(last); });
+  defense.addEventListener("change", function () {
+    if (defense.checked) { counts.skill = 0; syncSteppers(); }
+    if (last) render(last);
+  });
 
   // Start on the rulebook's worked example: 2 wounds, 3 Mind + Rune Atlas, Runes skill, dark and rushed
   syncSteppers();
