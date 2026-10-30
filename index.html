@@ -131,6 +131,18 @@ body.in-project .motto { font-size: 1rem; }
 }
 .tile[data-medium="Digital"]::after { background: #2fc4d6; color: #06252a; }
 .tile[data-medium="Physical"]::after { background: #8a5a32; color: #f6e7d2; }
+/* Filter toggles above the grid, in the ribbon colours */
+.filters { display: flex; flex-wrap: wrap; gap: 10px; }
+.filter {
+  min-height: 36px; padding: 8px 18px; border: 1px solid var(--c); border-radius: 999px; background: transparent; color: var(--bone); cursor: pointer;
+  font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.filter[data-filter="Digital"] { --c: #2fc4d6; --ink: #06252a; }
+.filter[data-filter="Physical"] { --c: #8a5a32; --ink: #f6e7d2; }
+.filter[data-filter="fin"] { --c: #e8862a; --ink: #2a1405; }
+.filter[aria-pressed="true"] { background: var(--c); color: var(--ink); font-weight: 700; }
+.filter:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.no-match { margin: 0; color: var(--muted); }
 .tile .label { padding-right: 64px !important; }
 .tile .art { position: absolute; inset: 0; }
 .tile .label {
@@ -351,6 +363,12 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 
   <main>
     <section class="home" id="home" aria-label="Projects">
+      <div class="filters" role="group" aria-label="Show only">
+        <button type="button" class="filter" data-filter="Digital" aria-pressed="false">Digital</button>
+        <button type="button" class="filter" data-filter="Physical" aria-pressed="false">Physical</button>
+        <button type="button" class="filter" data-filter="fin" aria-pressed="false">FIN</button>
+      </div>
+      <p class="no-match" hidden>No projects match these filters.</p>
       <ul class="grid">
         <li><a class="tile" href="#fading-suns" data-medium="Digital">
           <div class="art art-fs"><img class="fill px" src="img/fs-tile.png" alt="Pixel-art units from Houses of Fading Suns: a zeppelin, a dreadnought, a jet, a cardinal, a knight, an inquisitor, a plasma cannon, a battleship and a noble, on a starfield" width="108" height="108"></div>
@@ -1606,6 +1624,27 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     function stop() { img.src = still; }
     box.addEventListener("mouseenter", play); box.addEventListener("mouseleave", stop);
     box.addEventListener("focus", play); box.addEventListener("blur", stop);
+  });
+
+  // Filters: Digital and Physical show either medium, FIN narrows to finished projects
+  var filters = document.querySelectorAll(".filter"), noMatch = document.querySelector(".no-match");
+  function applyFilters() {
+    var on = {}, media = [], shown = 0;
+    Array.prototype.forEach.call(filters, function (f) { if (f.getAttribute("aria-pressed") === "true") on[f.dataset.filter] = true; });
+    if (on.Digital) media.push("Digital");
+    if (on.Physical) media.push("Physical");
+    Array.prototype.forEach.call(document.querySelectorAll(".grid > li"), function (li) {
+      var tile = li.querySelector(".tile");
+      var ok = (!media.length || media.indexOf(tile.dataset.medium) >= 0) && (!on.fin || tile.hasAttribute("data-fin"));
+      li.hidden = !ok; if (ok) shown++;
+    });
+    noMatch.hidden = shown > 0;
+  }
+  Array.prototype.forEach.call(filters, function (f) {
+    f.addEventListener("click", function () {
+      f.setAttribute("aria-pressed", f.getAttribute("aria-pressed") === "true" ? "false" : "true");
+      applyFilters();
+    });
   });
 
   function route() {
