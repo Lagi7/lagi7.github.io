@@ -148,6 +148,7 @@ picture source { display: none; }
 .art-rk { background: #7a3a20; }
 .art-cr { background: #e8e2d4; }
 .art-ce { background: #12283c; }
+.art-di { background: #2c4a5a; }
 /* Aethra tile: one square per map in the game */
 .art-ae { background: radial-gradient(circle at 50% 35%, #1d2233, #0a0c13 75%); }
 .map-index { width: 72%; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 5px; transform: translateY(-10%); }
@@ -406,6 +407,10 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
         <li><a class="tile" href="#laundry">
           <div class="art art-ce"><img class="fill" src="img/ce-tile.png" alt="A hex map of a green and brown continent in a blue ocean" width="400" height="400"></div>
           <span class="label"><span class="name">Laundry</span><span class="kind">C-evo mod</span></span>
+        </a></li>
+        <li><a class="tile" href="#delusional">
+          <div class="art art-di"><img class="fill" src="img/di-tile.jpg" alt="Fantasy map of zones with cities, wild areas guarded by dragons, roads, rivers and mountains" width="800" height="800"></div>
+          <span class="label"><span class="name">Delusional Invasion</span><span class="kind">Original board game</span></span>
         </a></li>
       </ul>
     </section>
@@ -1319,7 +1324,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Laundry -->
     <section class="project" data-view="laundry" aria-labelledby="t-ce" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#delusional">Next: Delusional Invasion →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="laundry"></div>
         <div class="p-intro">
@@ -1357,6 +1362,59 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
       <div class="block">
         <h3>Next</h3>
         <p>The standard AI was built for vanilla rules and gets stuck redesigning units under the new costs. Teaching it the mod's rules is the current work, along with a reworked tech tree.</p>
+      </div>
+    </section>
+    <!-- Delusional Invasion -->
+    <section class="project" data-view="delusional" aria-labelledby="t-di" hidden>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <div class="p-head">
+        <div class="p-art" data-art="delusional"></div>
+        <div class="p-intro">
+          <p class="p-kind">Original board game · area control</p>
+          <h2 id="t-di">Delusional Invasion</h2>
+          <p class="lede">An area control game where disasters decide the winner. Each Disaster that strikes goes to whoever has the most buildings and ships, and the most Disasters at the end wins.</p>
+          <ul class="facts">
+            <li>3 actions a turn</li>
+            <li>Cities, Wilds, Points of Interest, Seas</li>
+            <li>One deck: disasters and benefits</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <h3>How it plays</h3>
+        <div class="cols">
+          <div>
+            <h4>Turns</h4>
+            <p>Take three actions: Build, Build ship, Recruit, March, Sail, Reposition, Exploit or Uprising, each at most once, or play cards from hand as often as you like.</p>
+          </div>
+          <div>
+            <h4>Exploit and disasters</h4>
+            <p>Draw a card per Point of Interest you control. Every Disaster drawn (Winter, Fire, Disease, Flood, Famine, Storm, Brood, Levy) hits all players at once.</p>
+          </div>
+          <div>
+            <h4>Units</h4>
+            <p>Core units fight at 1, Elites at 2 and capture buildings and ships instead of destroying them. Monsters, summoned in the Wilds, fight at 0 but kill a unit.</p>
+          </div>
+          <div>
+            <h4>Combat</h4>
+            <p>Each side may play one card. Add strength; the defender wins ties. The winner scatters the loser's army into its adjacent zones, then monsters and kill cards take casualties.</p>
+          </div>
+          <div>
+            <h4>Buildings and ships</h4>
+            <p>Buildings hold zones without troops and let armies Reposition along a chain of built-up zones. Ships carry armies by sea and add strength in naval battles.</p>
+          </div>
+          <div>
+            <h4>Terrain</h4>
+            <p>Rivers and mountains block movement. Road, Boats and Flight cards get around them.</p>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <h3>The map</h3>
+        <figure class="fig">
+          <div class="stage"><img src="img/di-map.jpg" alt="Full game map: islands split into zones by roads, rivers and mountains, with city shields and dragon-marked wilds" width="1217" height="913"></div>
+          <figcaption>Shields mark Cities, dragons mark Wilds; arrows link the sea edges.</figcaption>
+        </figure>
       </div>
     </section>
   </main>
