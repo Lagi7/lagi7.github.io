@@ -142,3 +142,8 @@ for src, out in [("3pvariant.jpg", "cy-3p.jpg"), ("cadet variant.jpg", "cy-cadet
 # Yulin: South China Sea counters (the guide's empty white margin is cut off)
 Image.open(AV + "yulin-counter-guide.png").convert("RGB").crop((31, 0, 1043, 447)).save(O + "/scs-counter-guide.webp", quality=92)
 Image.open(AV + "yulin-counter-sheet.png").convert("RGB").save(O + "/scs-counter-sheet.webp", quality=92)
+
+# Age of Fantasy: Battalion tile, the right side of the rules page
+af = Image.open(AV + "battalion-rules.png").convert("RGBA")
+paper = Image.new("RGBA", af.size, (255, 255, 255, 255)); paper.alpha_composite(af)
+paper.convert("RGB").crop((152, 0, 941, 789)).resize((720, 720), Image.LANCZOS).save(O + "/af-rules-tile.png", optimize=True)
