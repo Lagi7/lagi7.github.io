@@ -366,7 +366,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
           <span class="label"><span class="name">Age of Wonders 1 art</span><span class="kind">Pixel art · mods</span></span>
         </a></li>
         <li><a class="tile" href="#war1gus" data-medium="Digital">
-          <div class="art art-w1"><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/w1-grunt.png"><img class="px" src="img/w1-grunt.gif" alt="Animated pixel-art orc grunt with a shield, walking" width="25" height="25"></picture></div>
+          <div class="art art-w1"><img class="px" src="img/w1-grunt.png" data-hover-src="img/w1-grunt.gif" alt="Pixel-art orc grunt with a shield" width="25" height="25"></div>
           <span class="label"><span class="name">War1gus</span><span class="kind">Pixel art · Warcraft 1</span></span>
         </a></li>
         <li><a class="tile" href="#burning-banners" data-medium="Physical">
@@ -1570,6 +1570,18 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
   Array.prototype.forEach.call(document.querySelectorAll("[data-art]"), function (slot) {
     var src = document.querySelector('.tile[href="#' + slot.dataset.art + '"] .art');
     if (src) slot.appendChild(src.cloneNode(true));
+  });
+
+  // Sprites with data-hover-src stand still and only play while the pointer is over their tile
+  var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  Array.prototype.forEach.call(document.querySelectorAll("img[data-hover-src]"), function (img) {
+    if (calm) return;
+    var still = img.getAttribute("src"), moving = img.dataset.hoverSrc, box = img.closest(".tile, .p-art");
+    new Image().src = moving;
+    function play() { img.src = moving; }
+    function stop() { img.src = still; }
+    box.addEventListener("mouseenter", play); box.addEventListener("mouseleave", stop);
+    box.addEventListener("focus", play); box.addEventListener("blur", stop);
   });
 
   function route() {
