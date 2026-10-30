@@ -103,6 +103,14 @@ body.in-project .motto { font-size: 1rem; }
   background: var(--panel); color: var(--bone); text-decoration: none;
   box-shadow: inset 0 0 0 3px var(--bg), inset 0 0 0 4px rgb(140 115 68 / 0.35);
 }
+.tile::after {
+  content: attr(data-medium); position: absolute; z-index: 2; right: -40px; bottom: 20px; width: 150px; padding: 4px 0;
+  transform: rotate(-45deg); text-align: center; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.5); pointer-events: none;
+}
+.tile[data-medium="Digital"]::after { background: #2fc4d6; color: #06252a; }
+.tile[data-medium="Physical"]::after { background: #8a5a32; color: #f6e7d2; }
+.tile .label { padding-right: 64px !important; }
 .tile .art { position: absolute; inset: 0; }
 .tile .label {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 40px 16px 14px;
@@ -345,11 +353,11 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
   <main>
     <section class="home" id="home" aria-label="Projects">
       <ul class="grid">
-        <li><a class="tile" href="#fading-suns">
+        <li><a class="tile" href="#fading-suns" data-medium="Digital">
           <div class="art art-fs"><img class="fill px" src="img/fs-tile.png" alt="Pixel-art units from Houses of Fading Suns: a zeppelin, a dreadnought, a jet, a cardinal, a knight, an inquisitor, a plasma cannon, a battleship and a noble, on a starfield" width="108" height="108"></div>
           <span class="label"><span class="name">Houses of Fading Suns</span><span class="kind">Strategy game · Godot</span></span>
         </a></li>
-        <li><a class="tile" href="#rust">
+        <li><a class="tile" href="#rust" data-medium="Physical">
           <div class="art art-rust" role="img" aria-label="Four RUST dice: a white base die and a yellow skill die showing successes, a black stress die showing a misfortune, a red wound die showing a skull">
             <span class="rust-word" aria-hidden="true">RUST</span>
             <div class="dice-fan" aria-hidden="true">
@@ -361,73 +369,73 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
           </div>
           <span class="label"><span class="name">RUST</span><span class="kind">Tabletop RPG rules</span></span>
         </a></li>
-        <li><a class="tile" href="#swantopolk">
+        <li><a class="tile" href="#swantopolk" data-medium="Physical">
           <div class="art art-nv"><img class="fill" src="img/nv-tile.jpg" alt="Nevsky board mid-game with the Swantopolk II variant: map, calendar and lord mats on a table" width="338" height="338"></div>
           <span class="label"><span class="name">Nevsky: Swantopolk II</span><span class="kind">Board game variant</span></span>
         </a></li>
-        <li><a class="tile" href="#bitter-heretic">
+        <li><a class="tile" href="#bitter-heretic" data-medium="Digital">
           <div class="art art-hr"><img class="px" src="img/hr-tile.png" alt="Pixel-art Wendigo, a hulking monster of blue ice, lit by torchlight" width="90" height="90"></div>
           <span class="label"><span class="name">Bitter Heretic</span><span class="kind">Heretic mod · GZDoom</span></span>
         </a></li>
-        <li><a class="tile" href="#aow1">
+        <li><a class="tile" href="#aow1" data-medium="Digital">
           <div class="art art-aow"><img class="fill px" src="img/aow-tile.png" alt="Four hero portraits: a centaur archer, a snowy owl, a flying whale and a winged succubus" width="208" height="208"></div>
           <span class="label"><span class="name">Age of Wonders 1 art</span><span class="kind">Pixel art · mods</span></span>
         </a></li>
-        <li><a class="tile" href="#war1gus">
+        <li><a class="tile" href="#war1gus" data-medium="Digital">
           <div class="art art-w1"><picture><source media="(prefers-reduced-motion: reduce)" srcset="img/w1-grunt.png"><img class="px" src="img/w1-grunt.gif" alt="Animated pixel-art orc grunt with a shield, walking" width="25" height="25"></picture></div>
           <span class="label"><span class="name">War1gus</span><span class="kind">Pixel art · Warcraft 1</span></span>
         </a></li>
-        <li><a class="tile" href="#burning-banners">
+        <li><a class="tile" href="#burning-banners" data-medium="Physical">
           <div class="art art-bb"><img class="fill" src="img/bb-tile.jpg" alt="Lammasu unit card: a winged bull with a crowned human head, strength 6" width="720" height="720"></div>
           <span class="label"><span class="name">Burning Banners: Elves</span><span class="kind">Board game expansion</span></span>
         </a></li>
-        <li><a class="tile" href="#aethra">
+        <li><a class="tile" href="#aethra" data-medium="Digital">
           <div class="art art-ae" role="img" aria-label="Every map in the game as a square: 1 world map in green, 16 towns in gold, 23 dungeon levels in grey-blue">
             <div class="map-index" aria-hidden="true"><span class="w"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
           </div>
           <span class="label"><span class="name">Aethra Chronicles</span><span class="kind">Remake · JavaScript</span></span>
         </a></li>
-        <li><a class="tile" href="#cyclades">
+        <li><a class="tile" href="#cyclades" data-medium="Physical">
           <div class="art art-cy"><img class="fill" src="img/cy-tile.jpg" alt="Cyclades board in the middle of a game: islands, fleets and troops on a wooden table" width="800" height="800"></div>
           <span class="label"><span class="name">Cyclades variant</span><span class="kind">Board game variant</span></span>
         </a></li>
-        <li><a class="tile" href="#yulin">
+        <li><a class="tile" href="#yulin" data-medium="Physical">
           <div class="art art-scs"><img class="fill" src="img/scs-tile.jpg" alt="South China Sea map mid-game with small custom counters, task force trays and Spent, Engage and Low Ammo markers" width="800" height="800"></div>
           <span class="label"><span class="name">Yulin: South China Sea</span><span class="kind">Board game variant</span></span>
         </a></li>
-        <li><a class="tile" href="#eclipse">
+        <li><a class="tile" href="#eclipse" data-medium="Physical">
           <div class="art art-ec"><img class="fill" src="img/ec-tile.jpg" alt="Eclipse hex sectors with red interceptors and a cruiser, discovery tiles and planets" width="304" height="304"></div>
           <span class="label"><span class="name">Eclipse: Second Dawn variant</span><span class="kind">Board game variant</span></span>
         </a></li>
-        <li><a class="tile" href="#trolls">
+        <li><a class="tile" href="#trolls" data-medium="Physical">
           <div class="art art-tp"><img class="fill" src="img/tp-tile.jpg" alt="Two players giving thumbs up over a Trolls and Princesses game in progress" width="750" height="750"></div>
           <span class="label"><span class="name">Trolls and Princesses variant</span><span class="kind">Board game variant</span></span>
         </a></li>
-        <li><a class="tile" href="#risk-lotr">
+        <li><a class="tile" href="#risk-lotr" data-medium="Physical">
           <div class="art art-rk"><img class="fill" src="img/rk-tile.jpg" alt="Risk: The Lord of the Rings map near Weathertop and Rivendell, crowded with red, black and green armies around a pink paper banner" width="800" height="800"></div>
           <span class="label"><span class="name">Polished Risk: LotR</span><span class="kind">Board game variant</span></span>
         </a></li>
-        <li><a class="tile" href="#crusades">
+        <li><a class="tile" href="#crusades" data-medium="Physical">
           <div class="art art-cr"><img class="fill" src="img/cr-tile.jpg" alt="Crusaders storming a castle tower with ladders, from the cover of Strategy &amp; Tactics no. 76" width="452" height="452"></div>
           <span class="label"><span class="name">The Crusades</span><span class="kind">Wargame charts</span></span>
         </a></li>
-        <li><a class="tile" href="#laundry">
+        <li><a class="tile" href="#laundry" data-medium="Digital">
           <div class="art art-ce"><img class="fill" src="img/ce-tile.jpg" alt="C-evo city screen with the build menu offering a Military Prototype" width="768" height="768"></div>
           <span class="label"><span class="name">Laundry</span><span class="kind">C-evo mod</span></span>
         </a></li>
-        <li><a class="tile" href="#delusional">
+        <li><a class="tile" href="#delusional" data-medium="Physical">
           <div class="art art-di"><img class="fill" src="img/di-tile.jpg" alt="Fantasy map of zones with cities, wild areas guarded by dragons, roads, rivers and mountains" width="800" height="800"></div>
           <span class="label"><span class="name">Delusional Invasion</span><span class="kind">Original board game</span></span>
         </a></li>
-        <li><a class="tile" href="#battalion">
+        <li><a class="tile" href="#battalion" data-medium="Physical">
           <div class="art art-af"><img class="fill" src="img/af-tile.png" alt="Rules diagram: a blue unit charging 12 inches along a curved arrow into an orange enemy" width="500" height="500"></div>
           <span class="label"><span class="name">Age of Fantasy: Battalion</span><span class="kind">Wargame rules</span></span>
         </a></li>
-        <li><a class="tile" href="#cep-wojenny">
+        <li><a class="tile" href="#cep-wojenny" data-medium="Physical">
           <div class="art art-cw"><img class="fill" src="img/cw-tile.png" alt="The text k100 above Cep Wojenny on dark red" width="400" height="400"></div>
           <span class="label"><span class="name">Cep Wojenny</span><span class="kind">RPG rules · WFRP 2e</span></span>
         </a></li>
-        <li><a class="tile" href="#srebrna-flota">
+        <li><a class="tile" href="#srebrna-flota" data-medium="Physical">
           <div class="art art-sf"><img class="fill" src="img/sf-tile.jpg" alt="A painted galleon under full sail, from the Srebrna Flota box" width="395" height="395"></div>
           <span class="label"><span class="name">Srebrna Flota</span><span class="kind">Board game redesign</span></span>
         </a></li>
