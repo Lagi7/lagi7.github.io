@@ -22,6 +22,7 @@ It is published in two places:
 | `tools/make_images.py` | Rebuilds everything in `img/` from the original art in the Desktop project folders. |
 | `tools/build_site.py` | Rebuilds `index.html` from `page.html`. |
 | `tools/knight_from_design.py` | Reads the knight avatar back, pixel by pixel, from the design screenshot `source/avatar-knight-design.png` and saves `img/av-knight-design.png`, the avatar used in the header. |
+| `tools/og_card.py` | Draws `img/og-card.png`, the picture shown when a link to the page is pasted into Discord, BGG, Reddit and similar sites. Rerun it after changing the name, motto or avatars. |
 
 ## Changing the page
 
