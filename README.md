@@ -21,6 +21,7 @@ It is published in two places:
 | `fonts/` | Morpheus's readme and licence note (the font file itself is kept out of the repository). Shareware by Kiwi Media: the author asks $5 if you like it. |
 | `tools/make_images.py` | Rebuilds everything in `img/` from the original art in the Desktop project folders. |
 | `tools/build_site.py` | Rebuilds `index.html` from `page.html`. |
+| `tools/knight_full.py` | Draws the rest of the knight's armour around `source/avatar-knight.png` and saves `img/av-knight-full.png`, the avatar used in the header. |
 
 ## Changing the page
 
