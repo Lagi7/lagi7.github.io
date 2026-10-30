@@ -80,7 +80,6 @@ tile = Image.new("RGBA", (208, 208), (0, 0, 0, 255))
 for k, p in enumerate(ports):
     sq = p.crop((0, 0, 103, 103)); tile.paste(sq, ((k % 2) * 105, (k // 2) * 105))
 tile.save(O + "/aow-tile.png")
-row(ports, 6).save(O + "/aow-portraits.png")
 sp = ["kraken/New Folder2/New Folderasd/kraken1.bmp", "Leviathan/New Folder/leviathan1.bmp", "sunken city/New Folder2/sunken_city1.bmp", "coral reef/New Folder2/reef1.bmp",
       "mushroom farm/New Folder/mushroom farm2.bmp", "shipyard/New Folder2/shipyard1.bmp", "fary dragon/fairydragon/fairydrgn00.bmp", "lizard warrior/final/lizWR101.bmp", "wizard tower/2nd update/WTwr.gif"]
 row([key(Image.open(A + f)) for f in sp], 8, valign="bottom").save(O + "/aow-sprites.png")
