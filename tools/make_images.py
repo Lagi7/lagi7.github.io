@@ -150,3 +150,4 @@ paper.convert("RGB").crop((152, 0, 941, 789)).resize((720, 720), Image.LANCZOS).
 
 # Aethra Chronicles screenshot
 Image.open(AV + "aethra-screen.png").convert("RGB").save(O + "/ae-screen.png", optimize=True)
+Image.open(AV + "aethra-screen.png").convert("RGB").crop((322, 0, 1257, 935)).resize((720, 720), Image.LANCZOS).save(O + "/ae-tile.png", optimize=True)

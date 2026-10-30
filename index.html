@@ -43,9 +43,6 @@ img { max-width: 100%; }
   --d-wound: #b3362b;
   --rust-1: #3b1d10;
   --rust-2: #7c3c1d;
-  --map-world: #6fae5a;
-  --map-town: #d9a640;
-  --map-dungeon: #6b7896;
   --font-display: "Morpheus", "Metamorphous", "Palatino Linotype", Georgia, serif;
   --font-body: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
@@ -181,10 +178,6 @@ picture source { display: none; }
 .art-sf { background: #2a5a9a; }
 /* Aethra tile: one square per map in the game */
 .art-ae { background: radial-gradient(circle at 50% 35%, #1d2233, #0a0c13 75%); }
-.map-index { width: 72%; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 5px; transform: translateY(-10%); }
-.map-index span { aspect-ratio: 1; border-radius: 2px; background: var(--map-dungeon); }
-.map-index .w { background: var(--map-world); }
-.map-index .t { background: var(--map-town); }
 code { font-family: var(--font-mono); font-size: 0.9em; color: var(--gold); }
 
 /* RUST tile art: four dice on rusted iron */
@@ -317,7 +310,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
   .tile .art > * { transition: transform 220ms ease; }
   .tile:hover .art > .fill, .tile:hover .art > .dice-fan { transform: scale(1.04); }
   .tile:hover .art-w1 img { transform: translateY(-10%) scale(1.04); }
-  .tile:hover .art > .map-index { transform: translateY(-10%) scale(1.04); }
   .dice.rolling .die { animation: tumble 380ms ease-out; }
   @keyframes tumble { 0% { transform: translateY(-14px) rotate(-40deg); opacity: 0.2; } 100% { transform: none; opacity: 1; } }
 }
@@ -407,9 +399,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
           <span class="label"><span class="name">Burning Banners</span><span class="kind">Board game expansion</span></span>
         </a></li>
         <li><a class="tile" href="#aethra" data-medium="Digital">
-          <div class="art art-ae" role="img" aria-label="Every map in the game as a square: 1 world map in green, 16 towns in gold, 23 dungeon levels in grey-blue">
-            <div class="map-index" aria-hidden="true"><span class="w"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span class="t"></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-          </div>
+          <div class="art art-ae"><img class="fill" src="img/ae-tile.png" alt="Aethra Chronicles game screen: the coast of Celystra beside the portraits of the party of six" width="720" height="720"></div>
           <span class="label"><span class="name">Aethra Chronicles</span><span class="kind">Remake · JavaScript</span></span>
         </a></li>
         <li><a class="tile" href="#cyclades" data-medium="Physical" data-fin>
