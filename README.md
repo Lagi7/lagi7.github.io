@@ -17,7 +17,7 @@ It is published in two places:
 | `page.html` | The page itself, as published on claude.ai. It has no `<html>`/`<head>` tags because claude.ai adds them. The Morpheus font is embedded in it. |
 | `index.html` | The same page wrapped as a normal web page for GitHub Pages. Generated: do not edit it by hand. |
 | `img/` | Pictures the page uses. |
-| `source/` | The two original avatar pictures, the name design (`name-design.png`), the drawn name (`name.svg`) and the Bitter Heretic screenshots (`bitter-heretic-screen.webp` gives that project its tile and page picture; `bitter-heretic-wheel.png` shows the weapon wheel). |
+| `source/` | The two original avatar pictures, the name design (`name-design.png`), the drawn name (`name.svg`) and the Bitter Heretic screenshots (`bitter-heretic-screen.webp` gives that project its tile and page picture; `bitter-heretic-wheel.png` shows the weapon wheel). It also has the Yulin counter guide and counter sheet (`yulin-counter-guide.png`, `yulin-counter-sheet.png`). |
 | `fonts/` | Morpheus's readme and licence note (the font file itself is kept out of the repository). Shareware by Kiwi Media: the author asks $5 if you like it. |
 | `tools/make_images.py` | Rebuilds everything in `img/` from the original art in the Desktop project folders. |
 | `tools/build_site.py` | Rebuilds `index.html` from `page.html`. |

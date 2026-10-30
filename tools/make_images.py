@@ -138,3 +138,7 @@ for src, out in [("croesus.jpg", "cy-croesus.jpg"), ("charo2n.jpg", "cy-charon.j
 a = Image.open(CY + "antigone.jpg").convert("RGB"); a.thumbnail((800, 800), Image.LANCZOS); a.save(O + "/cy-antigone.jpg", quality=86)
 for src, out in [("3pvariant.jpg", "cy-3p.jpg"), ("cadet variant.jpg", "cy-cadet.jpg"), ("custom creatures.jpg", "cy-creatures.jpg")]:
     c = Image.open(CY + src).convert("RGB"); c.thumbnail((900, 900), Image.LANCZOS); c.save(O + "/" + out, quality=82)
+
+# Yulin: South China Sea counters (the guide's empty white margin is cut off)
+Image.open(AV + "yulin-counter-guide.png").convert("RGB").crop((31, 0, 1043, 447)).save(O + "/scs-counter-guide.webp", quality=92)
+Image.open(AV + "yulin-counter-sheet.png").convert("RGB").save(O + "/scs-counter-sheet.webp", quality=92)
