@@ -69,6 +69,8 @@ HG = D + "stare z pulpitu/heretic graphics/"
 scr = Image.open(AV + "bitter-heretic-screen.webp").convert("RGB")
 scr.crop((540, 0, 1606, 1066)).resize((720, 720), Image.LANCZOS).save(O + "/hr-tile.jpg", quality=86)
 shutil.copyfile(AV + "bitter-heretic-screen.webp", O + "/hr-screen.webp")
+# the Snipping Tool popup in the bottom right is cut off
+Image.open(AV + "bitter-heretic-wheel.png").convert("RGB").crop((0, 0, 1520, 1063)).save(O + "/hr-wheel.webp", quality=90)
 row([Image.open(HG + "wendigo/" + f).convert("RGBA") for f in ["ICEYH1.png", "ICEYQ1.png", "ICEYH2H8.png"]], 10, valign="bottom").save(O + "/hr-wendigo.png")
 
 # Age of Wonders 1
