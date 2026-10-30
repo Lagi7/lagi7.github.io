@@ -1,9 +1,8 @@
 # Portfolio
 
 Łagi's projects page: two avatars, the name "Łagi", the motto "Amalgamator of sprites, tailor
-of rules.", and nine square buttons that each open a project page (Houses of Fading Suns, RUST,
-Nevsky: Swantopolk II, Bitter Heretic, Age of Wonders 1 art, War1gus, Burning Banners,
-Aethra Chronicles, Cyclades variant).
+of rules.", Digital / Physical / FIN filter buttons, and a grid of square buttons, one per project,
+that each open the project's page.
 
 It is published in two places:
 
