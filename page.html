@@ -132,6 +132,7 @@ picture source { display: none; }
 .art-ec { background: #1a1630; }
 .art-tp { background: #6b5a3a; }
 .art-rk { background: #7a3a20; }
+.art-cr { background: #e8e2d4; }
 /* Aethra tile: one square per map in the game */
 .art-ae { background: radial-gradient(circle at 50% 35%, #1d2233, #0a0c13 75%); }
 .map-index { width: 72%; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 5px; transform: translateY(-10%); }
@@ -381,6 +382,10 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
         <li><a class="tile" href="#risk-lotr">
           <div class="art art-rk"><img class="fill" src="img/rk-tile.jpg" alt="Risk: The Lord of the Rings map near Weathertop and Rivendell, crowded with red, black and green armies around a pink paper banner" width="800" height="800"></div>
           <span class="label"><span class="name">Polished Risk: LotR</span><span class="kind">Board game variant</span></span>
+        </a></li>
+        <li><a class="tile" href="#crusades">
+          <div class="art art-cr"><img class="fill" src="img/cr-tile.jpg" alt="Crusaders storming a castle tower with ladders, from the cover of Strategy &amp; Tactics no. 76" width="452" height="452"></div>
+          <span class="label"><span class="name">The Crusades</span><span class="kind">Wargame charts</span></span>
         </a></li>
       </ul>
     </section>
@@ -1221,7 +1226,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Risk LotR -->
     <section class="project" data-view="risk-lotr" aria-labelledby="t-rk" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#crusades">Next: The Crusades →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="risk-lotr"></div>
         <div class="p-intro">
@@ -1272,6 +1277,24 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
           <div class="stage paper"><img src="img/rk-rules.jpg" alt="Printed one-page rules sheet: setup, unit table, game order, reinforcement, maneuver, invasion and scoring" width="1499" height="1067"></div>
           <figcaption>The printed rules sheet, the last surviving copy of the 2020 version.</figcaption>
         </figure>
+      </div>
+    </section>
+    <!-- Crusades -->
+    <section class="project" data-view="crusades" aria-labelledby="t-cr" hidden>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <div class="p-head">
+        <div class="p-art" data-art="crusades"></div>
+        <div class="p-intro">
+          <p class="p-kind">Wargame aids</p>
+          <h2 id="t-cr">The Crusades</h2>
+          <p class="lede">Play aids for <a href="https://boardgamegeek.com/boardgame/6240/the-crusades-western-invasions-of-the-holy-land-10"><em>The Crusades: Western Invasions of the Holy Land 1097–1191 A.D.</em></a>, the Strategy &amp; Tactics magazine game: cleaned-up charts and tables, and the Third Crusade order of battle sorted by starting hex.</p>
+          <p><a href="https://boardgamegeek.com/filepage/285608/crusades-3rd-crusades-edited-charts-and-tables"><strong>Edited charts and tables →</strong></a> · <a href="https://boardgamegeek.com/filepage/283850/third-crusade-order-of-battle-per-starting-hex">Order of battle per starting hex</a></p>
+          <ul class="facts">
+            <li>Third Crusade scenario</li>
+            <li>Charts and tables</li>
+            <li>Setup by hex</li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
