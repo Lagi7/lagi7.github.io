@@ -130,6 +130,7 @@ picture source { display: none; }
 .art-cy { background: #0e2a35; }
 .art-scs { background: #1d3a4a; }
 .art-ec { background: #1a1630; }
+.art-tp { background: #6b5a3a; }
 /* Aethra tile: one square per map in the game */
 .art-ae { background: radial-gradient(circle at 50% 35%, #1d2233, #0a0c13 75%); }
 .map-index { width: 72%; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 5px; transform: translateY(-10%); }
@@ -371,6 +372,10 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
         <li><a class="tile" href="#eclipse">
           <div class="art art-ec"><img class="fill" src="img/ec-tile.jpg" alt="Eclipse hex sectors with red interceptors and a cruiser, discovery tiles and planets" width="304" height="304"></div>
           <span class="label"><span class="name">Eclipse: Second Dawn variant</span><span class="kind">Board game variant</span></span>
+        </a></li>
+        <li><a class="tile" href="#trolls">
+          <div class="art art-tp"><img class="fill" src="img/tp-tile.jpg" alt="Two players giving thumbs up over a Trolls and Princesses game in progress" width="750" height="750"></div>
+          <span class="label"><span class="name">Trolls and Princesses variant</span><span class="kind">Board game variant</span></span>
         </a></li>
       </ul>
     </section>
@@ -1061,7 +1066,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Eclipse -->
     <section class="project" data-view="eclipse" aria-labelledby="t-ec" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#trolls">Next: Trolls and Princesses variant →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="eclipse"></div>
         <div class="p-intro">
@@ -1113,6 +1118,58 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
           </div>
         </div>
         <p><strong>Being tested:</strong> spend 10 Science on a discovery tile instead of a technology.</p>
+      </div>
+    </section>
+    <!-- Trolls and Princesses -->
+    <section class="project" data-view="trolls" aria-labelledby="t-tp" hidden>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <div class="p-head">
+        <div class="p-art" data-art="trolls"></div>
+        <div class="p-intro">
+          <p class="p-kind">Board game variant · 2024</p>
+          <h2 id="t-tp">Trolls and Princesses variant</h2>
+          <p class="lede">Deflation, swift trolls and even more dismayed princesses. House rules that cut downtime, rebalance scoring away from item sets and make kidnapping princesses actually happen.</p>
+          <p><a href="https://boardgamegeek.com/thread/3300429/deflation-swift-trolls-and-even-more-dismayed-prin"><strong>Read the rules on BoardGameGeek →</strong></a></p>
+          <ul class="facts">
+            <li>One troll move per turn</li>
+            <li>Item sets 1/3/5 VP</li>
+            <li>Always 4 villages</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <h3>What changes</h3>
+        <div class="cols">
+          <div>
+            <h4>Swift trolls</h4>
+            <p>One troll move per turn instead of two. Trolls outside Cauldrons wait in supply; two can go to one place only if at least one comes from supply.</p>
+          </div>
+          <div>
+            <h4>Deflation</h4>
+            <p>Item sets score 1/3/5 instead of 4/9/15, a princess 6&nbsp;VP, so blue caves and Troll Cards matter.</p>
+          </div>
+          <div>
+            <h4>Princesses</h4>
+            <p>Capturing one takes 4 trolls and brings a troll changeling to your board instead of a King tile, unlocking an upgrade.</p>
+          </div>
+          <div>
+            <h4>Private King goals</h4>
+            <p>Each player gets three hidden King Cards, one per colour. King tiles are drawn at random, so no one builds around the broken ones.</p>
+          </div>
+          <div>
+            <h4>Villages</h4>
+            <p>Always four villages with one Human each. All Round Cards form one shared stack; draw 2, not 3. Hiring a Human costs no energy, a changeling 1.</p>
+          </div>
+          <div>
+            <h4>Caves</h4>
+            <p>New cave tiles get resources on their mining symbols. The replenish action mines 1 Obsidian instead. Displays refill only by action.</p>
+          </div>
+        </div>
+        <p>Smaller tweaks: the changeling barn spot gives a whole barn, and Red starts with 1 Obsidian.</p>
+      </div>
+      <div class="block">
+        <h3>At the table</h3>
+        <p>A three-player game took two hours, scored 48, 45 and 35. Players new to the game praised how smoothly it ran.</p>
       </div>
     </section>
   </main>
