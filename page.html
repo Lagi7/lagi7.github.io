@@ -133,6 +133,7 @@ picture source { display: none; }
 .art-tp { background: #6b5a3a; }
 .art-rk { background: #7a3a20; }
 .art-cr { background: #e8e2d4; }
+.art-ce { background: #12283c; }
 /* Aethra tile: one square per map in the game */
 .art-ae { background: radial-gradient(circle at 50% 35%, #1d2233, #0a0c13 75%); }
 .map-index { width: 72%; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 5px; transform: translateY(-10%); }
@@ -386,6 +387,10 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
         <li><a class="tile" href="#crusades">
           <div class="art art-cr"><img class="fill" src="img/cr-tile.jpg" alt="Crusaders storming a castle tower with ladders, from the cover of Strategy &amp; Tactics no. 76" width="452" height="452"></div>
           <span class="label"><span class="name">The Crusades</span><span class="kind">Wargame charts</span></span>
+        </a></li>
+        <li><a class="tile" href="#laundry">
+          <div class="art art-ce"><img class="fill" src="img/ce-tile.png" alt="A hex map of a green and brown continent in a blue ocean" width="400" height="400"></div>
+          <span class="label"><span class="name">Laundry</span><span class="kind">C-evo mod</span></span>
         </a></li>
       </ul>
     </section>
@@ -1281,7 +1286,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Crusades -->
     <section class="project" data-view="crusades" aria-labelledby="t-cr" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#laundry">Next: Laundry →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="crusades"></div>
         <div class="p-intro">
@@ -1295,6 +1300,48 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
             <li>Setup by hex</li>
           </ul>
         </div>
+      </div>
+    </section>
+    <!-- Laundry -->
+    <section class="project" data-view="laundry" aria-labelledby="t-ce" hidden>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <div class="p-head">
+        <div class="p-art" data-art="laundry"></div>
+        <div class="p-intro">
+          <p class="p-kind">Game mod · 2016 · AI work in progress</p>
+          <h2 id="t-ce">Laundry</h2>
+          <p class="lede">A rules mod for C-evo, the open turn-based strategy game in the spirit of Civilization II, now ported to Lazarus as New Horizons. Less micro-management, fewer obvious choices.</p>
+          <ul class="facts">
+            <li>C-evo New Horizons</li>
+            <li>Pascal / Lazarus</li>
+            <li>No public download yet</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <h3>What changes</h3>
+        <div class="cols">
+          <div>
+            <h4>Unit costs</h4>
+            <p>A unit's cost adds up all its parts instead of taking the largest one. Heavy units weigh more and need up to triple support from their city.</p>
+          </div>
+          <div>
+            <h4>Production</h4>
+            <p>Factories and power plants work independently, each adding 25% instead of 50% together.</p>
+          </div>
+          <div>
+            <h4>Governments</h4>
+            <p>New corruption levels and bonuses for each government.</p>
+          </div>
+          <div>
+            <h4>Happiness and land</h4>
+            <p>Surplus happiness turns into research or money. Mines need Iron Working.</p>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <h3>Next</h3>
+        <p>The standard AI was built for vanilla rules and gets stuck redesigning units under the new costs. Teaching it the mod's rules is the current work, along with a reworked tech tree.</p>
       </div>
     </section>
   </main>
