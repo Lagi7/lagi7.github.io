@@ -136,6 +136,8 @@ picture source { display: none; }
 .art-ce { background: #12283c; }
 .art-di { background: #2c4a5a; }
 .art-af { background: #ffffff; }
+.art-cw { background: #3a100e; }
+.art-sf { background: #2a5a9a; }
 /* Aethra tile: one square per map in the game */
 .art-ae { background: radial-gradient(circle at 50% 35%, #1d2233, #0a0c13 75%); }
 .map-index { width: 72%; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 5px; transform: translateY(-10%); }
@@ -401,6 +403,14 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
         <li><a class="tile" href="#battalion">
           <div class="art art-af"><img class="fill" src="img/af-tile.png" alt="Rules diagram: a blue unit charging 12 inches along a curved arrow into an orange enemy" width="500" height="500"></div>
           <span class="label"><span class="name">Age of Fantasy: Battalion</span><span class="kind">Wargame rules</span></span>
+        </a></li>
+        <li><a class="tile" href="#cep-wojenny">
+          <div class="art art-cw"><img class="fill" src="img/cw-tile.png" alt="The text k100 above Cep Wojenny on dark red" width="400" height="400"></div>
+          <span class="label"><span class="name">Cep Wojenny</span><span class="kind">RPG rules · WFRP 2e</span></span>
+        </a></li>
+        <li><a class="tile" href="#srebrna-flota">
+          <div class="art art-sf"><img class="fill" src="img/sf-tile.jpg" alt="A painted galleon under full sail, from the Srebrna Flota box" width="395" height="395"></div>
+          <span class="label"><span class="name">Srebrna Flota</span><span class="kind">Board game redesign</span></span>
         </a></li>
       </ul>
     </section>
@@ -1422,7 +1432,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Battalion -->
     <section class="project" data-view="battalion" aria-labelledby="t-af" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#cep-wojenny">Next: Cep Wojenny →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="battalion"></div>
         <div class="p-intro">
@@ -1472,6 +1482,58 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
           <div class="stage paper"><img src="img/af-orders.jpg" alt="Rules page showing the four orders, Hold, Rush, Advance and Charge, with movement diagrams" width="496" height="702"></div>
           <figcaption>The four orders, from the rules booklet.</figcaption>
         </figure>
+      </div>
+    </section>
+    <!-- Cep Wojenny -->
+    <section class="project" data-view="cep-wojenny" aria-labelledby="t-cw" hidden>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#srebrna-flota">Next: Srebrna Flota →</a></nav>
+      <div class="p-head">
+        <div class="p-art" data-art="cep-wojenny"></div>
+        <div class="p-intro">
+          <p class="p-kind">Tabletop RPG rules · 2014 · Polish</p>
+          <h2 id="t-cw">Cep Wojenny</h2>
+          <p class="lede">A reworked mechanic for the second edition of Warhammer Fantasy Roleplay: fewer, clearer attributes, no secondary stats, and creature size that actually matters.</p>
+          <ul class="facts">
+            <li>46 pages</li>
+            <li>k100 tests</li>
+            <li>Basic and advanced careers</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <h3>What changes</h3>
+        <div class="cols">
+          <div>
+            <h4>Eight attributes</h4>
+            <p>Weapon Skill, Ballistic Skill, Build, Agility, Reason, Will, Fellowship and Perception. Strength and Toughness merge into Build; Perception splits off from Intelligence. Secondary stats are gone.</p>
+          </div>
+          <div>
+            <h4>Size</h4>
+            <p>Creatures fall into size classes from very small to very large, each shifting damage dice, so a horse with low Build still outmuscles a strong dog.</p>
+          </div>
+          <div>
+            <h4>No Fate, no Fortune</h4>
+            <p>Spend 3 XP to escape death, and the GM may send a mundane misfortune in return. Spend a Vitality token to reroll, take an extra action or make an extra attack.</p>
+          </div>
+          <div>
+            <h4>Players roll</h4>
+            <p>Only players make tests: the GM reveals an NPC's stats and a player rolls for the opposed test. Rerolls come as rerolls of failure and of success.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Srebrna Flota -->
+    <section class="project" data-view="srebrna-flota" aria-labelledby="t-sf" hidden>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <div class="p-head">
+        <div class="p-art" data-art="srebrna-flota"></div>
+        <div class="p-intro">
+          <p class="p-kind">Board game redesign · Polish</p>
+          <h2 id="t-sf">Srebrna Flota</h2>
+          <p class="lede">“Olej kokosowy”, a Polish redesign of <em>Srebrna Flota</em>, the Novina board game of galleons and sea battles.</p>
+          <p><a href="https://boardgamegeek.com/filepage/228652/srebrna-flota-olej-kokosowy-polish-redesign"><strong>Download on BoardGameGeek →</strong></a></p>
+        </div>
       </div>
     </section>
   </main>
