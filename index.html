@@ -149,6 +149,7 @@ picture source { display: none; }
 .art-cr { background: #e8e2d4; }
 .art-ce { background: #12283c; }
 .art-di { background: #2c4a5a; }
+.art-af { background: #ffffff; }
 /* Aethra tile: one square per map in the game */
 .art-ae { background: radial-gradient(circle at 50% 35%, #1d2233, #0a0c13 75%); }
 .map-index { width: 72%; display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 5px; transform: translateY(-10%); }
@@ -411,6 +412,10 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
         <li><a class="tile" href="#delusional">
           <div class="art art-di"><img class="fill" src="img/di-tile.jpg" alt="Fantasy map of zones with cities, wild areas guarded by dragons, roads, rivers and mountains" width="800" height="800"></div>
           <span class="label"><span class="name">Delusional Invasion</span><span class="kind">Original board game</span></span>
+        </a></li>
+        <li><a class="tile" href="#battalion">
+          <div class="art art-af"><img class="fill" src="img/af-tile.png" alt="Rules diagram: a blue unit charging 12 inches along a curved arrow into an orange enemy" width="500" height="500"></div>
+          <span class="label"><span class="name">Age of Fantasy: Battalion</span><span class="kind">Wargame rules</span></span>
         </a></li>
       </ul>
     </section>
@@ -1373,7 +1378,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Delusional Invasion -->
     <section class="project" data-view="delusional" aria-labelledby="t-di" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#battalion">Next: Age of Fantasy: Battalion →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="delusional"></div>
         <div class="p-intro">
@@ -1421,6 +1426,60 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
         <figure class="fig">
           <div class="stage"><img src="img/di-map.jpg" alt="Full game map: islands split into zones by roads, rivers and mountains, with city shields and dragon-marked wilds" width="1217" height="913"></div>
           <figcaption>Shields mark Cities, dragons mark Wilds; arrows link the sea edges.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <!-- Battalion -->
+    <section class="project" data-view="battalion" aria-labelledby="t-af" hidden>
+      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
+      <div class="p-head">
+        <div class="p-art" data-art="battalion"></div>
+        <div class="p-intro">
+          <p class="p-kind">Wargame rules · 2023–2026</p>
+          <h2 id="t-af">Age of Fantasy: Battalion</h2>
+          <p class="lede">Rank-and-file fantasy battles on multibased units. Alternating activations, simultaneous melee, and one golden rule: roll the dice right now, check stats and cover after.</p>
+          <p><a href="files/Age_of_Fantasy_Battalion.pdf" download><strong>Download the rules (PDF, 0.7&nbsp;MB) →</strong></a></p>
+          <ul class="facts">
+            <li>4 rounds</li>
+            <li>“1 me – 1 you” activation</li>
+            <li>Damage marked with dice</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block">
+        <h3>How it plays</h3>
+        <div class="cols">
+          <div>
+            <h4>Orders</h4>
+            <p>Each activation gives a unit one order: Hold, Advance (6&Prime;), Rush (12&Prime;, no shooting) or Charge (12&Prime;). A random side starts each of the four rounds.</p>
+          </div>
+          <div>
+            <h4>Attacks</h4>
+            <p>Roll Attack dice against the target's Defense; a 6 always wounds, a 1 always fails. Tough is how many wounds a unit takes before it's removed. Damage never reduces attacks.</p>
+          </div>
+          <div>
+            <h4>Fatigue and Evasion</h4>
+            <p>A unit that has attacked is Fatigued, and its enemies gain Evasion, a second save. Cover, hindered charges and flanks add Evasion too.</p>
+          </div>
+          <div>
+            <h4>Melee and morale</h4>
+            <p>Charged units fight each other at once and stay locked in. Wounds plus Combat Resolution decide the loser, who tests Morale on 4+ or flees to the table edge.</p>
+          </div>
+          <div>
+            <h4>Spells</h4>
+            <p>Spells always succeed, ignore cover and reach 18&Prime;. A wizard can't repeat a spell until the others have been cast.</p>
+          </div>
+          <div>
+            <h4>Gear and rules</h4>
+            <p>Spears give Phalanx, lances Impact, paired weapons Rage, great weapons AP. Leadership lets a commander activate nearby units together.</p>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <h3>Orders</h3>
+        <figure class="fig">
+          <div class="stage paper"><img src="img/af-orders.jpg" alt="Rules page showing the four orders, Hold, Rush, Advance and Charge, with movement diagrams" width="496" height="702"></div>
+          <figcaption>The four orders, from the rules booklet.</figcaption>
         </figure>
       </div>
     </section>
