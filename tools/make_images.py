@@ -85,6 +85,7 @@ sp = ["kraken/New Folder2/New Folderasd/kraken1.bmp", "Leviathan/New Folder/levi
       "mushroom farm/New Folder/mushroom farm2.bmp", "shipyard/New Folder2/shipyard1.bmp", "fary dragon/fairydragon/fairydrgn00.bmp", "lizard warrior/final/lizWR101.bmp", "wizard tower/2nd update/WTwr.gif"]
 row([key(Image.open(A + f)) for f in sp], 8, valign="bottom").save(O + "/aow-sprites.png")
 key(Image.open(A + "Mammoth Logo/mammoth.bmp"), (255, 255, 255)).save(O + "/aow-mammoth.png")
+shutil.copyfile(AV + "aow-armored-elephant.gif", O + "/aow-elephant.gif")
 
 # War1gus
 WG = D + "stare z pulpitu/archive war1gus/save wa1g/War1gus/contrib/graphics/"
