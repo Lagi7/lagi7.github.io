@@ -196,9 +196,6 @@ code { font-family: var(--font-mono); font-size: 0.9em; color: var(--gold); }
 
 /* Project pages */
 .project { padding-block: 22px 56px; display: grid; gap: 40px; }
-.crumbs { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px 20px; font-family: var(--font-mono); font-size: var(--step--1); }
-.crumbs a { text-decoration: none; }
-.crumbs a:hover { text-decoration: underline; }
 .p-head { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 36px; align-items: center; }
 .p-art { aspect-ratio: 1; max-width: 100%; border: 1px solid var(--gold-dim); border-radius: var(--radius); overflow: hidden; position: relative; box-shadow: 0 18px 40px rgb(0 0 0 / 0.45); }
 .p-art .art { position: absolute; inset: 0; }
@@ -431,7 +428,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 
     <!-- Houses of Fading Suns -->
     <section class="project" data-view="fading-suns" aria-labelledby="t-fs" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#rust">Next: RUST →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="fading-suns"></div>
         <div class="p-intro">
@@ -500,7 +496,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 
     <!-- RUST -->
     <section class="project" data-view="rust" aria-labelledby="t-rust" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#swantopolk">Next: Swantopolk II →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="rust"></div>
         <div class="p-intro">
@@ -591,7 +586,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 
     <!-- Swantopolk II -->
     <section class="project" data-view="swantopolk" aria-labelledby="t-nv" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#bitter-heretic">Next: Bitter Heretic →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="swantopolk"></div>
         <div class="p-intro">
@@ -726,7 +720,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 
     <!-- Bitter Heretic -->
     <section class="project" data-view="bitter-heretic" aria-labelledby="t-hr" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#aow1">Next: Age of Wonders 1 art →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="bitter-heretic"></div>
         <div class="p-intro">
@@ -788,7 +781,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 
     <!-- Age of Wonders 1 -->
     <section class="project" data-view="aow1" aria-labelledby="t-aow" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#war1gus">Next: War1gus →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="aow1"></div>
         <div class="p-intro">
@@ -839,7 +831,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 
     <!-- War1gus -->
     <section class="project" data-view="war1gus" aria-labelledby="t-w1" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#burning-banners">Next: Burning Banners →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="war1gus"></div>
         <div class="p-intro">
@@ -893,7 +884,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 
     <!-- Burning Banners -->
     <section class="project" data-view="burning-banners" aria-labelledby="t-bb" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#aethra">Next: Aethra Chronicles →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="burning-banners"></div>
         <div class="p-intro">
@@ -945,7 +935,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 
     <!-- Aethra Chronicles -->
     <section class="project" data-view="aethra" aria-labelledby="t-ae" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#cyclades">Next: Cyclades variant →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="aethra"></div>
         <div class="p-intro">
@@ -992,7 +981,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 
     <!-- Cyclades -->
     <section class="project" data-view="cyclades" aria-labelledby="t-cy" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#yulin">Next: Yulin: South China Sea →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="cyclades"></div>
         <div class="p-intro">
@@ -1079,7 +1067,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Yulin -->
     <section class="project" data-view="yulin" aria-labelledby="t-scs" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#eclipse">Next: Eclipse: Second Dawn variant →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="yulin"></div>
         <div class="p-intro">
@@ -1151,7 +1138,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Eclipse -->
     <section class="project" data-view="eclipse" aria-labelledby="t-ec" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#trolls">Next: Trolls and Princesses variant →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="eclipse"></div>
         <div class="p-intro">
@@ -1207,7 +1193,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Trolls and Princesses -->
     <section class="project" data-view="trolls" aria-labelledby="t-tp" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#risk-lotr">Next: Polished Risk: LotR →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="trolls"></div>
         <div class="p-intro">
@@ -1259,7 +1244,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Risk LotR -->
     <section class="project" data-view="risk-lotr" aria-labelledby="t-rk" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#crusades">Next: The Crusades →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="risk-lotr"></div>
         <div class="p-intro">
@@ -1314,7 +1298,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Crusades -->
     <section class="project" data-view="crusades" aria-labelledby="t-cr" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#laundry">Next: Laundry →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="crusades"></div>
         <div class="p-intro">
@@ -1332,7 +1315,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Laundry -->
     <section class="project" data-view="laundry" aria-labelledby="t-ce" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#delusional">Next: Delusional Invasion →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="laundry"></div>
         <div class="p-intro">
@@ -1381,7 +1363,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Delusional Invasion -->
     <section class="project" data-view="delusional" aria-labelledby="t-di" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#battalion">Next: Age of Fantasy: Battalion →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="delusional"></div>
         <div class="p-intro">
@@ -1434,7 +1415,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Battalion -->
     <section class="project" data-view="battalion" aria-labelledby="t-af" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#cep-wojenny">Next: Cep Wojenny →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="battalion"></div>
         <div class="p-intro">
@@ -1488,7 +1468,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     </section>
     <!-- Cep Wojenny -->
     <section class="project" data-view="cep-wojenny" aria-labelledby="t-cw" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#srebrna-flota">Next: Srebrna Flota →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="cep-wojenny"></div>
         <div class="p-intro">
@@ -1527,7 +1506,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 
     <!-- Srebrna Flota -->
     <section class="project" data-view="srebrna-flota" aria-labelledby="t-sf" hidden>
-      <nav class="crumbs"><a href="#">← All projects</a><a href="#fading-suns">Next: Houses of Fading Suns →</a></nav>
       <div class="p-head">
         <div class="p-art" data-art="srebrna-flota"></div>
         <div class="p-intro">
