@@ -1,7 +1,7 @@
 """Rebuilds the pictures in img/ from the original art in the Desktop project folders.
 Run: python tools/make_images.py   (writes into img/)
 """
-import sys, glob, os, random
+import sys, glob, os, random, shutil
 from PIL import Image, ImageSequence
 O = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "img")
 D = "C:/Users/inzla/OneDrive/Desktop/"
@@ -66,7 +66,9 @@ row_ = Image.open(N + "rowing example.png").convert("RGB"); row_.thumbnail((900,
 
 # Bitter Heretic
 HG = D + "stare z pulpitu/heretic graphics/"
-Image.open(HG + "wendigo/ICEYH1.png").convert("RGBA").save(O + "/hr-tile.png")
+scr = Image.open(AV + "bitter-heretic-screen.webp").convert("RGB")
+scr.crop((540, 0, 1606, 1066)).resize((720, 720), Image.LANCZOS).save(O + "/hr-tile.jpg", quality=86)
+shutil.copyfile(AV + "bitter-heretic-screen.webp", O + "/hr-screen.webp")
 row([Image.open(HG + "wendigo/" + f).convert("RGBA") for f in ["ICEYH1.png", "ICEYQ1.png", "ICEYH2H8.png"]], 10, valign="bottom").save(O + "/hr-wendigo.png")
 
 # Age of Wonders 1

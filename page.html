@@ -137,8 +137,7 @@ picture source { display: none; }
 .art .fill { width: 100%; height: 100%; object-fit: cover; }
 .art-fs { background: var(--night); }
 .art-nv { background: #3e5a35; }
-.art-hr { background: radial-gradient(circle at 30% 70%, #f2a64a 0, #9b4a1a 6%, #3a1a0e 22%, #0a0705 52%); }
-.art-hr img { width: 74%; height: auto; transform: translate(6%, -6%); filter: drop-shadow(-6px 6px 0 rgb(0 0 0 / 0.35)); }
+.art-hr { background: #2b2b22; }
 .art-aow { background: #000; }
 .art-w1 { background: var(--moss); }
 .art-w1 img { width: 66%; height: auto; transform: translateY(-8%); }
@@ -311,7 +310,6 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
 @media (prefers-reduced-motion: no-preference) {
   .tile .art > * { transition: transform 220ms ease; }
   .tile:hover .art > .fill, .tile:hover .art > .dice-fan { transform: scale(1.04); }
-  .tile:hover .art-hr img { transform: translate(6%, -8%) scale(1.04); }
   .tile:hover .art-w1 img { transform: translateY(-10%) scale(1.04); }
   .tile:hover .art > .map-index { transform: translateY(-10%) scale(1.04); }
   .dice.rolling .die { animation: tumble 380ms ease-out; }
@@ -381,7 +379,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
           <span class="label"><span class="name">Nevsky: Swantopolk II</span><span class="kind">Board game variant</span></span>
         </a></li>
         <li><a class="tile" href="#bitter-heretic" data-medium="Digital" data-fin>
-          <div class="art art-hr"><img class="px" src="img/hr-tile.png" alt="Pixel-art Wendigo, a hulking monster of blue ice, lit by torchlight" width="90" height="90"></div>
+          <div class="art art-hr"><img class="fill" src="img/hr-tile.jpg" alt="Bitter Heretic in play: a spiked mace raised in a stone hall full of monsters" width="720" height="720"></div>
           <span class="label"><span class="name">Bitter Heretic</span><span class="kind">Heretic mod · GZDoom</span></span>
         </a></li>
         <li><a class="tile" href="#aow1" data-medium="Digital">
@@ -760,6 +758,12 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
             <li>New monster sprites in 2025</li>
           </ul>
         </div>
+      </div>
+      <div class="block">
+        <figure class="fig">
+          <div class="stage"><img src="img/hr-screen.webp" alt="Bitter Heretic in play: first-person view with a spiked mace and a round shield, facing shield-bearing warriors, golems on a staircase and a red winged gargoyle in a stone hall with a red carpet" width="1906" height="1066"></div>
+          <figcaption>In play: mace and shield against a hall full of monsters.</figcaption>
+        </figure>
       </div>
       <div class="block">
         <h3>What it changes</h3>
