@@ -123,6 +123,7 @@ body.in-project .motto { font-size: 1rem; }
 .filter[data-filter="Digital"] { --c: #2fc4d6; --ink: #06252a; }
 .filter[data-filter="Physical"] { --c: #8a5a32; --ink: #f6e7d2; }
 .filter[data-filter="fin"] { --c: #e8862a; --ink: #2a1405; }
+.filter[data-filter="notfin"] { --c: #9a9488; --ink: #1c1a16; }
 .filter[aria-pressed="true"] { background: var(--c); color: var(--ink); font-weight: 700; }
 .filter:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .no-match { margin: 0; color: var(--muted); }
@@ -344,6 +345,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
         <button type="button" class="filter" data-filter="Digital" aria-pressed="false">Digital</button>
         <button type="button" class="filter" data-filter="Physical" aria-pressed="false">Physical</button>
         <button type="button" class="filter" data-filter="fin" aria-pressed="false">FIN</button>
+        <button type="button" class="filter" data-filter="notfin" aria-pressed="false">Not FIN</button>
       </div>
       <p class="no-match" hidden>No projects match these filters.</p>
       <ul class="grid">
@@ -1597,7 +1599,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     box.addEventListener("focus", play); box.addEventListener("blur", stop);
   });
 
-  // Filters: Digital and Physical show either medium, FIN narrows to finished projects
+  // Filters: Digital and Physical show either medium, FIN and Not FIN narrow to finished or unfinished projects
   var filters = document.querySelectorAll(".filter"), noMatch = document.querySelector(".no-match");
   function applyFilters() {
     var on = {}, media = [], shown = 0;
@@ -1606,7 +1608,7 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
     if (on.Physical) media.push("Physical");
     Array.prototype.forEach.call(document.querySelectorAll(".grid > li"), function (li) {
       var tile = li.querySelector(".tile");
-      var ok = (!media.length || media.indexOf(tile.dataset.medium) >= 0) && (!on.fin || tile.hasAttribute("data-fin"));
+      var ok = (!media.length || media.indexOf(tile.dataset.medium) >= 0) && (!on.fin || tile.hasAttribute("data-fin")) && (!on.notfin || !tile.hasAttribute("data-fin"));
       li.hidden = !ok; if (ok) shown++;
     });
     noMatch.hidden = shown > 0;
@@ -1614,6 +1616,8 @@ footer { border-top: 1px solid var(--line); padding-block: 28px 44px; display: f
   Array.prototype.forEach.call(filters, function (f) {
     f.addEventListener("click", function () {
       f.setAttribute("aria-pressed", f.getAttribute("aria-pressed") === "true" ? "false" : "true");
+      var other = { fin: "notfin", notfin: "fin" }[f.dataset.filter];
+      if (other && f.getAttribute("aria-pressed") === "true") document.querySelector('.filter[data-filter="' + other + '"]').setAttribute("aria-pressed", "false");
       applyFilters();
     });
   });
